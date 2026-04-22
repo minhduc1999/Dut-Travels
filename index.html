@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dut's Travel Journal</title>
+
+<!-- LIB -->
+<script src="https://unpkg.com/three"></script>
+<script src="https://unpkg.com/globe.gl"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.css"/>
+<script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"/>
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="globeViz"></div>
+
+<div id="hero">
+  <img src="img/title.png" alt="Travel Diary" class="title-img">
+
+  <p class="subtitle">
+  A personal travel journal of places I've explored 
+  </p>
+
+<button id="enterBtn">Explore my journey</button>
+
+<div class="travel-stats">
+  <div class="stat">
+    <p>Places Visited</p>
+    <h2>12+</h2>
+    
+  </div>
+
+  <div class="stat">
+    <p>Countries Visited</p>
+    <h2>3</h2>
+    
+  </div>
+
+  <div class="stat">
+    <p>Years of Memories</p>
+    <h2>2022 - 2026</h2>
+    
+  </div>
+</div>
+<p class="credit">
+  Built by <a href="https://x.com/dut469" target="_blank" class="author">@dut469</a> • 
+  Stored on <a href="https://x.com/WalrusProtocol" target="_blank" class="author">Walrus</a>
+</p>
+
+
+</div>
+
+
+
+<div id="mapView">
+  <div id="map"></div>
+  <div id="sidebar"></div>
+  <button id="backBtn">← Back</button>
+</div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
