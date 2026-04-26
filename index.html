@@ -1,81 +1,97 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dut's Travel Journal</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Dut's Travel Journal</title>
 
-<!-- LIB -->
-<script src="https://unpkg.com/three"></script>
-<script src="https://unpkg.com/globe.gl"></script>
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <script src="https://unpkg.com/three"></script>
+  <script src="https://unpkg.com/globe.gl"></script>
 
-<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
-<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <link rel="icon" type="image/png" href="https://aggregator.walrus-mainnet.walrus.space/v1/blobs/1mL8GwdR_YI9coDTFvfi5uqAfOe1aUcgaYh89MRxk2U">
 
-<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.css"/>
-<script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css"/>
+  
+  <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"/>
+  
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"/>
-<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<div id="globeViz"></div>
+  <div id="globeViz"></div>
 
-<div id="hero">
-  <img src="img/title.png" alt="Travel Diary" class="title-img">
+  <div id="noise"></div>
 
-  <p class="subtitle">
-  A personal travel journal of places I've explored 
-  </p>
+  <div id="hero">
+    <div class="hero-inner">
+      <div class="hero-badge">Personal Archive</div>
+      <img
+        src="https://aggregator.walrus-mainnet.walrus.space/v1/blobs/JVkAZ4fSYZPe8EtM9hxwICebwI0ijx6NZVKYB4c_SOM"
+        alt="Dut's Travel Journal"
+        class="title-img"
+      >
+      <p class="subtitle">A curated journal of places, stories &amp; memories</p>
 
-<button id="enterBtn">Explore my journey</button>
+      <button id="enterBtn">
+        <span>Explore my journey</span>
+        <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 10h12M10 4l6 6-6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
 
-<div class="travel-stats">
-  <div class="stat">
-    <p>Places Visited</p>
-    <h2>12+</h2>
-    
+      <div class="travel-stats">
+        <div class="stat">
+          <h2>12<span>+</span></h2>
+          <p>Places Visited</p>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <h2>3</h2>
+          <p>Countries</p>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <h2>6<span>yrs</span></h2>
+          <p>of Memories</p>
+        </div>
+      </div>
+
+      <p class="credit">
+        By <a href="https://x.com/dut469" target="_blank" rel="noopener" class="author">@dut469</a>
+        &nbsp;·&nbsp;
+        Stored on <a href="https://x.com/WalrusProtocol" target="_blank" rel="noopener" class="author">Walrus</a>
+      </p>
+    </div>
   </div>
 
-  <div class="stat">
-    <p>Countries Visited</p>
-    <h2>3</h2>
-    
+  <!-- Map view -->
+  <div id="mapView">
+    <div id="map"></div>
+    <div id="sidebar">
+      <div id="sidebarHandle"></div>
+      <div id="sidebarContent"></div>
+    </div>
+    <button id="backBtn">
+      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M13 4l-6 6 6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      Back to globe
+    </button>
   </div>
 
-  <div class="stat">
-    <p>Years of Memories</p>
-    <h2>2022 - 2026</h2>
-    
-  </div>
-</div>
-<p class="credit">
-  Built by <a href="https://x.com/dut469" target="_blank" class="author">@dut469</a> • 
-  Stored on <a href="https://x.com/WalrusProtocol" target="_blank" class="author">Walrus</a>
-</p>
+  <div id="toast"></div>
 
-
-</div>
-
-
-
-<div id="mapView">
-  <div id="map"></div>
-  <div id="sidebar"></div>
-  <button id="backBtn">← Back</button>
-</div>
-
-<script src="data.js"></script>
-<script src="app.js"></script>
-
+  <script src="data.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
