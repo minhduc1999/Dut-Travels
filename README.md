@@ -54,7 +54,8 @@ By using decentralized storage, this website demonstrates how personal stories a
 
 ## 📸 Screenshots
 
-<img width="1920" height="917" alt="image" src="https://github.com/user-attachments/assets/08568a17-5e5e-420d-b06e-fa993109c5b2" />
+<img width="1917" height="922" alt="image" src="https://github.com/user-attachments/assets/712be4c8-0c38-4dbf-8885-9919af195da4" />
+
 
 
 ---
