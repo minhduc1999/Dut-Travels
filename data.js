@@ -1,4 +1,4 @@
-const WALRUS = "https://aggregator.walrus-mainnet.walrus.space/v1/blobs/";
+const WALRUS = "https://aggregator.walrus-mainnet.walrus.space/v1/blobs";
 
 function blobUrl(id) {
   return `${WALRUS}/${id}`;
@@ -13,6 +13,14 @@ const cities = [
       { lat: 15.995,  lng: 107.988,  metaBlobId: "JfjGdGC79R3DvHeZkNEIwKQxfq3rJdqNSCi_5kNy2BY" },
       { lat: 16.0993, lng: 108.255,  metaBlobId: "2ZYHOqsaXT1neLfBR8kLVwzjxlOLCaq5xfi0FY2Z_lM" },
       { lat: 16.0612, lng: 108.2276, metaBlobId: "r0l-Wkp0EQkHwrn9uVVwrMxuVXFRGwduRf-_F5chusc" },
+    ]
+  },
+  {
+    name: "Phu Tho",
+    lat: 21.4167,
+    lng: 105.2333,
+    places: [
+      { lat: 21.4167, lng: 105.2369, metaBlobId: "pjSUdq_enjz-_kCaXe-HiIflOzZlbebNsRwR68LDAkI" },
     ]
   },
   {
