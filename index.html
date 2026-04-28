@@ -3,14 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Dut's Travel Journal</title>
+  <title>Dut's Travel Journal — Places, Stories & Memories</title>
+  <meta name="description" content="A curated travel journal by @dut469. Explore 12+ places across 3 countries — Vietnam, Thailand, China — with photos, stories and memories stored on Walrus.">
+  <meta name="keywords" content="travel journal, Vietnam travel, Da Nang, Hoi An, Hue, Hanoi, Ho Chi Minh City, travel photography, travel blog">
+  <meta name="author" content="dut469">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://dut469.travel/">
 
-  <script src="https://unpkg.com/three"></script>
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Dut's Travel Journal — Places, Stories & Memories">
+  <meta property="og:description" content="A curated travel journal by @dut469. 12+ places across 3 countries with photos and stories.">
+  <meta property="og:image" content="https://aggregator.walrus-mainnet.walrus.space/v1/blobs/JVkAZ4fSYZPe8EtM9hxwICebwI0ijx6NZVKYB4c_SOM">
+  <meta property="og:url" content="https://dut469.travel/">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@dut469">
+  <meta name="twitter:creator" content="@dut469">
+  <meta name="twitter:title" content="Dut's Travel Journal">
+  <meta name="twitter:description" content="A curated travel journal — 12+ places, 3 countries, 6 years of memories.">
+  <meta name="twitter:image" content="https://aggregator.walrus-mainnet.walrus.space/v1/blobs/JVkAZ4fSYZPe8EtM9hxwICebwI0ijx6NZVKYB4c_SOM">
+
+  <meta name="theme-color" content="#0a0c12">
+
+  <!-- <script src="https://unpkg.com/three"></script> -->
   <script src="https://unpkg.com/globe.gl"></script>
 
   <link rel="icon" type="image/png" href="https://aggregator.walrus-mainnet.walrus.space/v1/blobs/1mL8GwdR_YI9coDTFvfi5uqAfOe1aUcgaYh89MRxk2U">
 
-  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+  <!-- <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.css"/>
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css"/>
@@ -21,10 +42,39 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"/>
   
-  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script> -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Dut's Travel Journal",
+    "description": "A curated travel journal by @dut469. Explore 12+ places across 3 countries — Vietnam, Thailand, China — with photos, stories and memories.",
+    "url": "https://duttravels.wal.app/",
+    "author": {
+      "@type": "Person",
+      "name": "dut469",
+      "sameAs": "https://x.com/dut469"
+    },
+    "inLanguage": "en",
+    "image": "https://aggregator.walrus-mainnet.walrus.space/v1/blobs/JVkAZ4fSYZPe8EtM9hxwICebwI0ijx6NZVKYB4c_SOM",
+    "about": [
+      { "@type": "Place", "name": "Da Nang", "geo": { "@type": "GeoCoordinates", "latitude": 16.0544, "longitude": 108.2022 }, "addressCountry": "VN" },
+      { "@type": "Place", "name": "Hoi An",  "geo": { "@type": "GeoCoordinates", "latitude": 15.8687, "longitude": 108.3263 }, "addressCountry": "VN" },
+      { "@type": "Place", "name": "Kon Tum", "geo": { "@type": "GeoCoordinates", "latitude": 14.3538, "longitude": 108.0178 }, "addressCountry": "VN" },
+      { "@type": "Place", "name": "Hue",     "geo": { "@type": "GeoCoordinates", "latitude": 16.4637, "longitude": 107.5909 }, "addressCountry": "VN" },
+      { "@type": "Place", "name": "Quy Nhon","geo": { "@type": "GeoCoordinates", "latitude": 13.7765, "longitude": 109.2237 }, "addressCountry": "VN" },
+      { "@type": "Place", "name": "Quang Binh","geo": { "@type": "GeoCoordinates", "latitude": 17.2239, "longitude": 106.7604 }, "addressCountry": "VN" },
+      { "@type": "Place", "name": "Ho Chi Minh City","geo": { "@type": "GeoCoordinates", "latitude": 10.8231, "longitude": 106.6297 }, "addressCountry": "VN" },
+      { "@type": "Place", "name": "Hanoi",   "geo": { "@type": "GeoCoordinates", "latitude": 21.0285, "longitude": 105.8542 }, "addressCountry": "VN" },
+      { "@type": "Place", "name": "Bangkok", "geo": { "@type": "GeoCoordinates", "latitude": 13.7563, "longitude": 100.5018 }, "addressCountry": "TH" },
+      { "@type": "Place", "name": "China",   "geo": { "@type": "GeoCoordinates", "latitude": 30.3798, "longitude": 120.9143 }, "addressCountry": "CN" }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -74,19 +124,43 @@
     </div>
   </div>
 
-  <!-- Map view -->
+  <div id="cinematic-overlay">
+    <div class="cinematic-scan"></div>
+    <div class="cinematic-content">
+      <div class="cinematic-tag">DESTINATION</div>
+      <div id="cinematic-name"></div>
+      <div id="cinematic-coords"></div>
+      <div class="cinematic-bar"></div>
+      <div class="cinematic-loading">
+        <span class="cinematic-dot"></span>
+        <span class="cinematic-dot"></span>
+        <span class="cinematic-dot"></span>
+      </div>
+    </div>
+    <div class="cinematic-corner tl"></div>
+    <div class="cinematic-corner tr"></div>
+    <div class="cinematic-corner bl"></div>
+    <div class="cinematic-corner br"></div>
+    <div class="cinematic-hline top"></div>
+    <div class="cinematic-hline bottom"></div>
+  </div>
+
   <div id="mapView">
     <div id="map"></div>
     <div id="sidebar">
       <div id="sidebarHandle"></div>
       <div id="sidebarContent"></div>
     </div>
-    <button id="backBtn">
-      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <button id="backBtn" aria-label="Back to globe">
+      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <path d="M13 4l-6 6 6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
       Back to globe
     </button>
+    <div id="zoomControls" role="group" aria-label="Map zoom controls">
+      <button id="zoomIn" aria-label="Zoom in">+</button>
+      <button id="zoomOut" aria-label="Zoom out">−</button>
+    </div>
   </div>
 
   <div id="toast"></div>
